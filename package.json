@@ -1,0 +1,23 @@
+{
+  "name": "pweb-express-mongodb-p25-2024",
+  "version": "1.0.0",
+  "description": "| Nama                  | NRP        |\r | --------------------- | ---------- |\r | Danendra Fidel Khansa | 5027231063 |\r | Gallant Damas Hayuaji | 5027231037 |\r | Wira Samudra Siregar  | 5027231041 |",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node ./dist/index.js",
+    "start:dev": "nodemon ./src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.4",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
