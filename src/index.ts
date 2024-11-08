@@ -3,6 +3,7 @@ import connectDB from "./db-connection";
 import authRoutes from "./routes/auth.route";
 import bookRoutes from "./routes/book.route";
 import mechanismRoutes from "./routes/mechanism.route";
+import handleResponse from "./common/handleResponse";
 
 const app: Express = express();
 const port = 4000;
@@ -14,9 +15,10 @@ app.use(express.json());
 connectDB();
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Healthy");
+  const date = new Date();
+  const response = handleResponse("success", "Hello World", date);
+  res.send(response);
 });
-
 // Routes
 app.use("/book", bookRoutes);
 app.use("/auth", authRoutes);
