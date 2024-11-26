@@ -4,12 +4,14 @@ import authRoutes from "./routes/auth.route";
 import bookRoutes from "./routes/book.route";
 import mechanismRoutes from "./routes/mechanism.route";
 import handleResponse from "./common/handleResponse";
+import cors from "cors";
 
 const app: Express = express();
 const port = 4000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+app.use(cors());
 
 // Connect to MongoDB
 connectDB();
